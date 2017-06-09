@@ -161,7 +161,7 @@ public class SMOSmRongimModule extends ReactContextBaseJavaModule {
 
 
   @ReactMethod
-  public void chatlist(ReadableMap params, Callback callback){
+  public void openChatlist(ReadableMap params, Callback callback){
     // chatlist 实现, 返回参数用WritableMap封装, 调用callback.invoke(WritableMap)
     //启动会话列表界面
     if (RongIM.getInstance() != null)
