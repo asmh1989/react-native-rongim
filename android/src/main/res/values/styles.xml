@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- <style name="AnimBottom" parent="@android:style/Animation"> -->
+    <!-- <item name="android:windowEnterAnimation">@anim/push_bottom_in</item> -->
+    <!-- <item name="android:windowExitAnimation">@anim/push_bottom_out</item> -->
+    <!-- </style> -->
+    <!-- <style name="AnimAlert" parent="@android:style/Animation"> -->
+    <!-- <item name="android:windowEnterAnimation">@anim/push_bottom_in</item> -->
+    <!-- <item name="android:windowExitAnimation">@anim/push_bottom_out</item> -->
+    <!-- </style> -->
+
+    <style name="AlertActivity_AlertStyle" parent="android:Theme.Dialog">
+
+        <!-- <item name="android:windowAnimationStyle">@style/AnimAlert</item> -->
+        <!-- 边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 背景透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 模糊 -->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="GesturePasswordActivityStyle" parent="@android:style/Theme.DeviceDefault">
+        <item name="android:background">@color/gesture_color</item>
+    </style>
+
+     <drawable name="gesture_color">@color/gesture_color</drawable>
+
+     <style name="progress_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@null</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="SwitchButtonStyle">
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+    </style>
+
+
+</resources>

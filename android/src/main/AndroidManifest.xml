@@ -1,0 +1,95 @@
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.reactlibrary.sm_rongim">
+
+    <application >
+
+        <!-- 会话列表 -->
+        <activity
+            android:name="io.rong.fast.activity.ConversationListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.searching.crossapp.smartclient"
+                    android:pathPrefix="/conversationlist"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+
+        <!-- 聚合会话列表 -->
+        <activity
+            android:name="io.rong.fast.activity.SubConversationListActivtiy"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.rnsmobiler"
+                    android:pathPrefix="/subconversationlist"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+
+        <!-- 会话界面 -->
+        <activity
+            android:name="io.rong.fast.activity.ConversationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.rnsmobiler"
+                    android:pathPrefix="/conversation/"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+        <!--<activity-->
+            <!--android:name="io.rong.fast.activity.AMAPLocationActivity"-->
+            <!--android:screenOrientation="portrait" />-->
+        <activity
+            android:name="io.rong.fast.activity.FriendDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="io.rong.fast.activity.GroupDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="io.rong.fast.activity.TotalGroupMemberActivity"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name="io.rong.imlib.ipc.RongService"
+            android:process=":ipc" />
+        <service android:name="io.rong.imlib.ReConnectService" />
+
+        <receiver android:name="io.rong.imlib.ConnectChangeReceiver" />
+        <receiver
+            android:name="io.rong.imlib.HeartbeatReceiver"
+            android:process=":ipc" />
+        <receiver
+            android:name="io.rong.fast.receiver.SRCNotificationReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="io.rong.push.intent.MESSAGE_ARRIVED" />
+                <action android:name="io.rong.push.intent.MI_MESSAGE_ARRIVED" />
+                <action android:name="io.rong.push.intent.MESSAGE_CLICKED" />
+                <action android:name="io.rong.push.intent.MI_MESSAGE_CLICKED" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="RONG_CLOUD_APP_KEY"
+            android:value="e0x9wycfx7flq" />
+
+    </application>
+</manifest>

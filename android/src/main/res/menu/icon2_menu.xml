@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/icon2_menu"
+        android:title="群组信息"
+        android:icon="@drawable/icon2_menu"
+        android:showAsAction="always"/>
+</menu>
