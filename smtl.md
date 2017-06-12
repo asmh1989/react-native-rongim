@@ -7,9 +7,9 @@
 
 ```
 {
-    "method":"SMOSmRongim",
+    "module":"SMOSmRongim",
+    "method":"setToken",
     "params":{
-        "method":"setToken",
         "token":"..."
     }
 }
@@ -20,9 +20,9 @@
 
 ```
 {
-    "method":"SMOSmRongim",
+    "module":"SMOSmRongim",
+    "method":"openChat",
     "params":{
-        "method":"openChat",
         "token":"...",           // userid
         "title":"...",          
         "action":"pchat/gchat",  //单聊, 还是群聊
@@ -35,9 +35,9 @@
 
 ```
 {
-    "method":"SMOSmRongim",
+    "module":"SMOSmRongim",
+    "method":"openChatlist",
     "params":{
-        "method":"openChatlist",
     }
 }
 ```
