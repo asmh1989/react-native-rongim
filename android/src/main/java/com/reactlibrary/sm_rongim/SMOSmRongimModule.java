@@ -82,7 +82,7 @@ public class SMOSmRongimModule extends ReactContextBaseJavaModule {
     android.util.Log.d("ReactNativeJS..", ":setServerInfo: " + params.toString());
     String device = params.getString("id")+"";
     String ip = params.getString("server")+"";
-    String port = params.getString("port2")+"";
+    String port = params.getInt("port2")+"";
     boolean change = false;
 
     if(mDeviceID != device && device.length()>0){

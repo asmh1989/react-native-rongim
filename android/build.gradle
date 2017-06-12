@@ -24,7 +24,7 @@ android {
     lintOptions {
         abortOnError false
     }
-    
+
     buildTypes {
         release {
             consumerProguardFiles  getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
@@ -38,7 +38,6 @@ repositories {
 
 dependencies {
     compile 'com.facebook.react:react-native:+'
-    compile 'com.android.support:appcompat-v7:23.0.1'
     compile 'cn.rongcloud.android:IMLib:2.8.6'
     compile 'cn.rongcloud.android:IMKit:2.8.6'
 }
