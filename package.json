@@ -10,6 +10,42 @@
   "keywords": [
     "react-native"
   ],
+  "ios_resources": [
+    "SMOSmRongim_ios.plist",
+    "RongCloud/Emoji.plist",
+    "RongCloud/en.lproj/RongCloudKit.strings",
+    "RongCloud/Main.storyboard",
+    "RongCloud/zh-Hans/RongCloudKit.strings",
+    "RongCloud/RongCloud.bundle",
+    "RongCloud/RCConfig.plist"
+  ],
+  "rnpm": {
+		"ios": {
+			"sharedLibraries": [
+				"AssetsLibrary",
+				"AudioToolbox",
+				"AVFoundation",
+				"CoreAudio",
+				"CFNetwork",
+				"CoreGraphics",
+				"CoreLocation",
+				"Foundation",
+				"CoreMedia",
+				"CoreTelephony",
+        "ImageIO",
+				"libc++abi",
+				"libstdc++",
+				"libxml2",
+				"MapKit",
+				"OpenGLES",
+				"QuartzCore",
+        "SystemConfiguration",
+				"Photos",
+				"SafariServices",
+				"CoreVideo"
+			]
+		}
+	},
   "author": "",
   "license": "",
   "peerDependencies": {

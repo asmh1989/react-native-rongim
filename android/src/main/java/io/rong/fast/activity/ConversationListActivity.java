@@ -22,7 +22,8 @@ public class ConversationListActivity extends BaseRongIMActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.conversationlist);
 
-        ConversationListFragment fragment =  (ConversationListFragment)getSupportFragmentManager().findFragmentById(R.id.conversationlist);
+        ConversationListFragment fragment =  (ConversationListFragment)getSupportFragmentManager()
+                .findFragmentById(R.id.conversationlist);
 
         Uri uri = Uri.parse("rong://" + getApplicationInfo().packageName).buildUpon()
                 .appendPath("conversationlist")

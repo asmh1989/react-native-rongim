@@ -44,13 +44,20 @@ public class SMOSmRongimModule extends ReactContextBaseJavaModule {
     new Thread(new Runnable() {
       @Override
       public void run() {
-        try {
-          Thread.sleep(1000);
-        } catch (InterruptedException e) {
-          e.printStackTrace();
-        }
+        while (true) {
+          try {
+            Thread.sleep(1000);
+          } catch (InterruptedException e) {
+            e.printStackTrace();
+          }
 
-        refreshServer();
+          try {
+            refreshServer();
+            break;
+          } catch (Exception e) {
+
+          }
+        }
 
       }
     }).start();
@@ -96,7 +103,7 @@ public class SMOSmRongimModule extends ReactContextBaseJavaModule {
     }
 
     if(mPort != port && port.length()>0){
-      mPort = ip;
+      mPort = port;
       change = true;
     }
 
@@ -144,15 +151,15 @@ public class SMOSmRongimModule extends ReactContextBaseJavaModule {
     final String userid = params.getString("token");
     final String action = params.getString("action");
 
-    reactContext.runOnUiQueueThread(new Runnable() {
+    reactContext.getCurrentActivity().runOnUiThread(new Runnable() {
       @Override
       public void run() {
         //启动会话界面
         if (RongIM.getInstance() != null){
           if("pchat".equals(action)) {
-            RongIM.getInstance().startPrivateChat(reactContext, userid, title);
+            RongIM.getInstance().startPrivateChat(reactContext.getCurrentActivity(), userid, title);
           } else {
-            RongIM.getInstance().startGroupChat(reactContext, userid, title);
+            RongIM.getInstance().startGroupChat(reactContext.getCurrentActivity(), userid, title);
           }
         }
       }
@@ -164,17 +171,26 @@ public class SMOSmRongimModule extends ReactContextBaseJavaModule {
   public void openChatlist(ReadableMap params, Callback callback){
     // chatlist 实现, 返回参数用WritableMap封装, 调用callback.invoke(WritableMap)
     //启动会话列表界面
-    if (RongIM.getInstance() != null)
-      RongIM.getInstance().startConversationList(reactContext);
+
+    if (RongIM.getInstance() != null) {
+
+      reactContext.getCurrentActivity().runOnUiThread(new Runnable() {
+        @Override
+        public void run() {
+          RongIM.getInstance().startConversationList(reactContext.getCurrentActivity());
+
+        }
+      });
+    }
   }
 
 
   private  void startConnectIM()
   {
-    reactContext.runOnUiQueueThread(new Runnable() {
+    reactContext.getCurrentActivity().runOnUiThread(new Runnable() {
       @Override
       public void run() {
-        RongCloudApplication.connectIM(mToken, reactContext);
+        RongCloudApplication.connectIM(mToken, reactContext.getCurrentActivity());
       }
     });
   }

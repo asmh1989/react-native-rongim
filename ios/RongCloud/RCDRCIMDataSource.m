@@ -8,8 +8,6 @@
 
 #import <RongIMLib/RongIMLib.h>
 #import "RCDRCIMDataSource.h"
-#include "Config.h"
-#include "CADeviceId.h"
 
 @interface RCDRCIMDataSource ()
 {

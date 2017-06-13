@@ -244,14 +244,14 @@ public class RongCloudApplication {
         return "";
     }
 
-    public static void connectIM(final String token, final ReactApplicationContext activity)
+    public static void connectIM(final String token, final Activity activity)
     {
         RongIM.connect(token, new RongIMClient.ConnectCallback() {
             @Override
             public void onTokenIncorrect() {
                 //Connect Token 失效的状态处理，需要重新获取 Token
                 Log.e(TAG, "——onTokenIncorrect—-, token="+token);
-                activity.runOnUiQueueThread(new Runnable() {
+                activity.runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
                         Toast.makeText(activity, "token已失效", Toast.LENGTH_LONG).show();
@@ -275,7 +275,7 @@ public class RongCloudApplication {
             @Override
             public void onError(final RongIMClient.ErrorCode errorCode) {
                 Log.e(TAG, "——onError—-" + errorCode);
-                activity.runOnUiQueueThread(new Runnable() {
+                activity.runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
                         Toast.makeText(activity, "IM服务器连接失败, errorCode"+errorCode, Toast.LENGTH_LONG).show();

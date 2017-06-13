@@ -8,6 +8,7 @@
         <activity
             android:name="io.rong.fast.activity.ConversationListActivity"
             android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.DeviceDefault"
             android:windowSoftInputMode="stateHidden|adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -15,7 +16,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
 
                 <data
-                    android:host="com.searching.crossapp.smartclient"
+                    android:host="com.rnsmobiler"
                     android:pathPrefix="/conversationlist"
                     android:scheme="rong" />
             </intent-filter>
@@ -25,6 +26,7 @@
         <activity
             android:name="io.rong.fast.activity.SubConversationListActivtiy"
             android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.DeviceDefault"
             android:windowSoftInputMode="stateHidden|adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -42,6 +44,7 @@
         <activity
             android:name="io.rong.fast.activity.ConversationActivity"
             android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.DeviceDefault.Light"
             android:windowSoftInputMode="stateHidden|adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -59,12 +62,15 @@
             <!--android:screenOrientation="portrait" />-->
         <activity
             android:name="io.rong.fast.activity.FriendDetailActivity"
+            android:theme="@android:style/Theme.DeviceDefault"
             android:screenOrientation="portrait" />
         <activity
             android:name="io.rong.fast.activity.GroupDetailActivity"
+            android:theme="@android:style/Theme.DeviceDefault"
             android:screenOrientation="portrait" />
         <activity
             android:name="io.rong.fast.activity.TotalGroupMemberActivity"
+            android:theme="@android:style/Theme.DeviceDefault"
             android:screenOrientation="portrait" />
 
         <service

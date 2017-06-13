@@ -15,8 +15,7 @@
 		A4A6ACE91EEE342700F4DAA3 /* RCDConversationSettingTableViewHeaderItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A6ACC51EEE342700F4DAA3 /* RCDConversationSettingTableViewHeaderItem.m */; };
 		A4A6ACEA1EEE342700F4DAA3 /* RCDGroupMembersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A6ACC71EEE342700F4DAA3 /* RCDGroupMembersTableViewController.m */; };
 		A4A6ACEB1EEE342700F4DAA3 /* RCDGroupSettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A6ACC91EEE342700F4DAA3 /* RCDGroupSettingsTableViewController.m */; };
-		A4A6ACEC1EEE342700F4DAA3 /* RCDRCIMDataSource.mm in Sources */ = {isa = PBXBuildFile; fileRef = A4A6ACCD1EEE342700F4DAA3 /* RCDRCIMDataSource.mm */; };
-		A4A6ACED1EEE342700F4DAA3 /* RongCloudPlugin.mm in Sources */ = {isa = PBXBuildFile; fileRef = A4A6ACD01EEE342700F4DAA3 /* RongCloudPlugin.mm */; };
+		A4A6ACEC1EEE342700F4DAA3 /* RCDRCIMDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A6ACCD1EEE342700F4DAA3 /* RCDRCIMDataSource.m */; };
 		A4A6ACEE1EEE342700F4DAA3 /* RongIMKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4A6ACD11EEE342700F4DAA3 /* RongIMKit.framework */; };
 		A4A6ACEF1EEE342700F4DAA3 /* RongIMLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4A6ACD21EEE342700F4DAA3 /* RongIMLib.framework */; };
 		A4A6ACF01EEE342700F4DAA3 /* DefaultPortraitView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A6ACD51EEE342700F4DAA3 /* DefaultPortraitView.m */; };
@@ -26,6 +25,7 @@
 		A4A6ACF41EEE342700F4DAA3 /* UIColor+RCColor.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A6ACDE1EEE342700F4DAA3 /* UIColor+RCColor.m */; };
 		A4A6ACF51EEE342700F4DAA3 /* VTChatListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A6ACE01EEE342700F4DAA3 /* VTChatListViewController.m */; };
 		A4A6ACF61EEE342700F4DAA3 /* VTConversationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A6ACE21EEE342700F4DAA3 /* VTConversationViewController.m */; };
+		A4A6ACF71EEE354900F4DAA3 /* Emoji.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = A4A6ACBC1EEE342700F4DAA3 /* Emoji.plist */; };
 		B3E7B58A1CC2AC0600A0062D /* SMOSmRongim.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* SMOSmRongim.m */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +36,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				A4A6ACF71EEE354900F4DAA3 /* Emoji.plist in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,10 +66,7 @@
 		A4A6ACCA1EEE342700F4DAA3 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A4A6ACCB1EEE342700F4DAA3 /* RCConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RCConfig.plist; sourceTree = "<group>"; };
 		A4A6ACCC1EEE342700F4DAA3 /* RCDRCIMDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCDRCIMDataSource.h; sourceTree = "<group>"; };
-		A4A6ACCD1EEE342700F4DAA3 /* RCDRCIMDataSource.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RCDRCIMDataSource.mm; sourceTree = "<group>"; };
-		A4A6ACCE1EEE342700F4DAA3 /* RongCloud.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = RongCloud.bundle; sourceTree = "<group>"; };
-		A4A6ACCF1EEE342700F4DAA3 /* RongCloudPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RongCloudPlugin.h; sourceTree = "<group>"; };
-		A4A6ACD01EEE342700F4DAA3 /* RongCloudPlugin.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RongCloudPlugin.mm; sourceTree = "<group>"; };
+		A4A6ACCD1EEE342700F4DAA3 /* RCDRCIMDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCDRCIMDataSource.m; sourceTree = "<group>"; };
 		A4A6ACD11EEE342700F4DAA3 /* RongIMKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RongIMKit.framework; sourceTree = "<group>"; };
 		A4A6ACD21EEE342700F4DAA3 /* RongIMLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RongIMLib.framework; sourceTree = "<group>"; };
 		A4A6ACD41EEE342700F4DAA3 /* DefaultPortraitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultPortraitView.h; sourceTree = "<group>"; };
@@ -87,6 +85,7 @@
 		A4A6ACE11EEE342700F4DAA3 /* VTConversationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTConversationViewController.h; sourceTree = "<group>"; };
 		A4A6ACE21EEE342700F4DAA3 /* VTConversationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTConversationViewController.m; sourceTree = "<group>"; };
 		A4A6ACE31EEE342700F4DAA3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/RongCloudKit.strings"; sourceTree = "<group>"; };
+		A4A6AD661EEE645400F4DAA3 /* RongCloud.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = RongCloud.bundle; sourceTree = "<group>"; };
 		B3E7B5881CC2AC0600A0062D /* SMOSmRongim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMOSmRongim.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* SMOSmRongim.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMOSmRongim.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,6 +125,7 @@
 		A4A6ACB41EEE342700F4DAA3 /* RongCloud */ = {
 			isa = PBXGroup;
 			children = (
+				A4A6AD661EEE645400F4DAA3 /* RongCloud.bundle */,
 				A4A6ACB51EEE342700F4DAA3 /* ChartList */,
 				A4A6ACBC1EEE342700F4DAA3 /* Emoji.plist */,
 				A4A6ACBD1EEE342700F4DAA3 /* RongCloudKit.strings */,
@@ -133,10 +133,7 @@
 				A4A6ACCA1EEE342700F4DAA3 /* Main.storyboard */,
 				A4A6ACCB1EEE342700F4DAA3 /* RCConfig.plist */,
 				A4A6ACCC1EEE342700F4DAA3 /* RCDRCIMDataSource.h */,
-				A4A6ACCD1EEE342700F4DAA3 /* RCDRCIMDataSource.mm */,
-				A4A6ACCE1EEE342700F4DAA3 /* RongCloud.bundle */,
-				A4A6ACCF1EEE342700F4DAA3 /* RongCloudPlugin.h */,
-				A4A6ACD01EEE342700F4DAA3 /* RongCloudPlugin.mm */,
+				A4A6ACCD1EEE342700F4DAA3 /* RCDRCIMDataSource.m */,
 				A4A6ACD11EEE342700F4DAA3 /* RongIMKit.framework */,
 				A4A6ACD21EEE342700F4DAA3 /* RongIMLib.framework */,
 				A4A6ACD31EEE342700F4DAA3 /* Utilities */,
@@ -254,8 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4A6ACE41EEE342700F4DAA3 /* RCDPrivateSettingsCell.m in Sources */,
-				A4A6ACEC1EEE342700F4DAA3 /* RCDRCIMDataSource.mm in Sources */,
-				A4A6ACED1EEE342700F4DAA3 /* RongCloudPlugin.mm in Sources */,
+				A4A6ACEC1EEE342700F4DAA3 /* RCDRCIMDataSource.m in Sources */,
 				B3E7B58A1CC2AC0600A0062D /* SMOSmRongim.m in Sources */,
 				A4A6ACE71EEE342700F4DAA3 /* RCDBaseSettingTableViewCell.m in Sources */,
 				A4A6ACF01EEE342700F4DAA3 /* DefaultPortraitView.m in Sources */,
