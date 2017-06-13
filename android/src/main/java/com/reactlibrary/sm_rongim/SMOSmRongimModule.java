@@ -9,6 +9,7 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.Callback;
 import com.facebook.react.bridge.ReadableMap;
+import com.facebook.react.bridge.ReadableType;
 import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.modules.core.DeviceEventManagerModule;
 
@@ -89,7 +90,12 @@ public class SMOSmRongimModule extends ReactContextBaseJavaModule {
     android.util.Log.d("ReactNativeJS..", ":setServerInfo: " + params.toString());
     String device = params.getString("id")+"";
     String ip = params.getString("server")+"";
-    String port = params.getInt("port2")+"";
+    String port = mPort;
+    if(params.getType("port2") == ReadableType.Number){
+      port = params.getInt("port2")+"";
+    } else {
+      port = params.getString("port2");
+    }
     boolean change = false;
 
     if(mDeviceID != device && device.length()>0){

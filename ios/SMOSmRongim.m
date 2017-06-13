@@ -1,6 +1,13 @@
 
 #import "SMOSmRongim.h"
 
+@interface SMOSmRongim (){
+    NSString *mToken;
+    NSString *
+}
+
+@end
+
 @implementation SMOSmRongim
 
 - (dispatch_queue_t)methodQueue
